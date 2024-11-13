@@ -4,6 +4,7 @@
 using namespace std;
 // siema jestem nowy
 // pierwsza zmiana na dev
+// druga zmiana na dev
 
 
 class BST {
