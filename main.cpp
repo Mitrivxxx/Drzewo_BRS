@@ -3,6 +3,8 @@
 
 using namespace std;
 // siema jestem nowy
+//  pierwszy commit
+
 
 class BST {
 private:
