@@ -3,7 +3,13 @@
 
 using namespace std;
 // siema jestem nowy
+<<<<<<< HEAD
 //  pierwszy commit
+=======
+// pierwsza zmiana na dev
+
+
+>>>>>>> dev
 
 
 class BST {
