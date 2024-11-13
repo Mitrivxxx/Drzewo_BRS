@@ -1,0 +1,13 @@
+*.vcxproj
+*.filters
+*.user
+*.pfx
+*.props
+*.config
+*.txt
+
+pch.cpp
+pch.h
+
+x64/
+
