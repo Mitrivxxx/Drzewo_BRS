@@ -3,6 +3,8 @@
 
 using namespace std;
 // siema jestem nowy
+// pierwsza zmiana na dev
+
 
 class BST {
 private:
