@@ -3,17 +3,9 @@
 #include "iostream"
 
 using namespace std;
-<<<<<<< HEAD
-// siema jestem nowy
-<<<<<<< HEAD
-//  pierwszy commit
-=======
-// pierwsza zmiana na dev
-=======
->>>>>>> dev
 
+//jakas zmiana
 
->>>>>>> dev
 
 int main() {
     BST tree;
