@@ -4,30 +4,36 @@
 class BST {
 private:
     struct Node {
-        int data;
-        Node* left;
-        Node* right;
+        Node* p;        // WskaŸnik na rodzica
+        Node* left;     // WskaŸnik na lewego potomka
+        Node* right;    // WskaŸnik na prawego potomka
+        int key;        // Klucz (wartoœæ wêz³a)
 
-        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+        // Konstruktor dla u³atwienia inicjalizacji wêz³ów
+        Node(int k) : p(nullptr), left(nullptr), right(nullptr), key(k) {}
     };
-
-    Node* root;
-
-    // Funkcja pomocnicza do dodawania nowego elementu
-    Node* insert(Node* node, int value);
-
-    // Funkcja pomocnicza do wyœwietlania drzewa w porz¹dku inorder
-    void inorder(Node* node);
+    BST();
 
 public:
     // Konstruktor drzewa BST
-    BST();
+
 
     // Funkcja dodaj¹ca element do drzewa
-    void add(int value);
+
+
+    //Funkcja usuwaj¹ca element
+
+    //Funkcja szukajaca drogi do podaniego elementu
+
+    //niewiem o co chodzi
+
+    //Zapisz do pliku txt drzewo
+
+
 
     // Funkcja wyœwietlaj¹ca drzewo w porz¹dku inorder
-    void displayInOrder();
+    void inorder(Node* root);
+
 };
 
 #endif // BST_H

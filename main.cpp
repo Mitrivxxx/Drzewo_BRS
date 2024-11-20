@@ -19,7 +19,6 @@ int main() {
     tree.add(1);
     tree.add(3);
 
-    // Wyświetlenie drzewa w porządku inorder
     cout << "BST in-order: ";
     tree.displayInOrder();
 
