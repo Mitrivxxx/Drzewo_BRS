@@ -16,7 +16,8 @@ private:
 
     Node* insert(Node* current, int key);       //dodaj do drzewa
     Node* remove(Node* current, int key); // Rekurencyjna funkcja usuwania
-    Node* findMin(Node* current);        // Znajdowanie minimum w prawym poddrzewie
+    Node* findMin(Node* current);
+    void removeTree(Node* current); // usun cale drzewo
 
     
     //ukladanie drzewa
@@ -33,6 +34,7 @@ public:
 
     //Funkcja usuwaj¹ca element
     void remove(int key);
+    void removeTree();
     //Funkcja szukajaca drogi do podaniego elementu
 
     //niewiem o co chodzi

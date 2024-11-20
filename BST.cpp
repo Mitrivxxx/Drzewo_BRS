@@ -31,7 +31,7 @@ BST::Node* BST::insert(Node* current, int key) {
 
     return current; // Zwracamy bie¿¹cy wêze³
 }
-
+//usun element z drzewa
 BST::Node* BST::remove(Node* current, int key) {
     if (current == nullptr) {
         return nullptr; // Klucz nie znaleziony
@@ -71,6 +71,7 @@ BST::Node* BST::remove(Node* current, int key) {
     }
     return current;
 }
+//usun cale drzewo
 
 
 
@@ -118,6 +119,15 @@ BST::Node* BST::findMin(Node* current) {
     return current;
 }
 
+void BST::removeTree(Node* current)
+{
+    if (current != nullptr) {
+        removeTree(current->left);  // Usuñ lewe poddrzewo
+        removeTree(current->right); // Usuñ prawe poddrzewo
+        delete current;        // Usuñ bie¿¹cy wêze³
+    }
+}
+
 //----------Funkcje publiczne ---------
 void BST::show_inorder() {
     cout << "Inorder: "; 
@@ -137,6 +147,12 @@ void BST::show_postorder(){
 }
 void BST::remove(int key) {
     root = remove(root, key);
+}
+
+void BST::removeTree()
+{
+    removeTree(root);
+    root = nullptr;
 }
 
 
