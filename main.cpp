@@ -5,7 +5,13 @@
 
 
 using namespace std;
+<<<<<<< HEAD
 //costam
+=======
+
+//to jest plik dev
+
+>>>>>>> dev
 
 int main() {
     BST tree;
