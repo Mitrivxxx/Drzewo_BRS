@@ -12,14 +12,22 @@ private:
         // Konstruktor dla u³atwienia inicjalizacji wêz³ów
         Node(int k) : p(nullptr), left(nullptr), right(nullptr), key(k) {}
     };
-    BST();
+    Node* root;     //wskaznik na korzen drzewa
 
+    Node* insert(Node* current, int key);       //dodaj do drzewa
+    
+    
+    //ukladanie drzewa
+    void inorder(Node* root);
+    void preorder(Node* current);
+    void postorder(Node* current);
+    
 public:
-    // Konstruktor drzewa BST
-
-
+    // Konstruktor i destruktor
+    BST();
+    ~BST();
     // Funkcja dodaj¹ca element do drzewa
-
+    void insert(int key);
 
     //Funkcja usuwaj¹ca element
 
@@ -32,7 +40,10 @@ public:
 
 
     // Funkcja wyœwietlaj¹ca drzewo w porz¹dku inorder
-    void inorder(Node* root);
+    void show_inorder();
+    void show_preorder();
+    void show_postorder();
+
 
 };
 

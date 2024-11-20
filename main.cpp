@@ -11,16 +11,15 @@ using namespace std;
 
 int main() {
     BST tree;
+    tree.insert(5);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(1);
 
-    // Dodajemy elementy do drzewa
-    tree.add(11);
-    tree.add(53);
-    tree.add(12);
-    tree.add(1);
-    tree.add(3);
+    tree.show_inorder();
+    tree.show_postorder();
+    tree.show_preorder();
 
-    cout << "BST in-order: ";
-    tree.displayInOrder();
 
     return 0;
 }
