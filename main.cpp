@@ -20,6 +20,8 @@ int main() {
     tree.show_postorder();
     tree.show_preorder();
 
+    tree.remove(2);
+    tree.show_inorder();
 
     return 0;
 }

@@ -32,6 +32,50 @@ BST::Node* BST::insert(Node* current, int key) {
     return current; // Zwracamy bie¿¹cy wêze³
 }
 
+BST::Node* BST::remove(Node* current, int key) {
+    if (current == nullptr) {
+        return nullptr; // Klucz nie znaleziony
+    }
+
+    if (key < current->key) {
+        current->left = remove(current->left, key);
+    }
+    else if (key > current->key) {
+        current->right = remove(current->right, key);
+    }
+    else {
+        // Klucz znaleziony
+        if (current->left == nullptr && current->right == nullptr) {
+            // Wêze³ jest liœciem
+            delete current;
+            return nullptr;
+        }
+        else if (current->left == nullptr) {
+            // Wêze³ ma jedno dziecko (prawe)
+            Node* temp = current->right;
+            delete current;
+            return temp;
+        }
+        else if (current->right == nullptr) {
+            // Wêze³ ma jedno dziecko (lewe)
+            Node* temp = current->left;
+            delete current;
+            return temp;
+        }
+        else {
+            // Wêze³ ma dwoje dzieci
+            Node* minNode = findMin(current->right); // ZnajdŸ nastêpnika
+            current->key = minNode->key;            // Przepisz klucz
+            current->right = remove(current->right, minNode->key); // Usuñ nastêpnika
+        }
+    }
+    return current;
+}
+
+
+
+
+
 
 //Funkcje ukladajace drzewo
 // inorder
@@ -63,15 +107,20 @@ void BST::postorder(Node* current)
 
 
 
-//Funkcjie pomocnicze
+//------------------------Funkcjie pomocnicze------------------
 void BST::insert(int key) {
-    cout << "Inorder: ";
     root = insert(root, key);
 }
+BST::Node* BST::findMin(Node* current) {
+    while (current->left != nullptr) {
+        current = current->left;
+    }
+    return current;
+}
 
-
-//ukladanie drzewa
+//----------Funkcje publiczne ---------
 void BST::show_inorder() {
+    cout << "Inorder: "; 
     inorder(root);
     cout << endl;
 }
@@ -85,6 +134,9 @@ void BST::show_postorder(){
     cout << "Postorder: ";
     postorder(root);
     cout << endl; // Dodanie nowej linii po wyœwietleniu
+}
+void BST::remove(int key) {
+    root = remove(root, key);
 }
 
 

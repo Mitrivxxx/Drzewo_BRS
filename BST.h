@@ -15,7 +15,9 @@ private:
     Node* root;     //wskaznik na korzen drzewa
 
     Node* insert(Node* current, int key);       //dodaj do drzewa
-    
+    Node* remove(Node* current, int key); // Rekurencyjna funkcja usuwania
+    Node* findMin(Node* current);        // Znajdowanie minimum w prawym poddrzewie
+
     
     //ukladanie drzewa
     void inorder(Node* root);
@@ -30,7 +32,7 @@ public:
     void insert(int key);
 
     //Funkcja usuwaj¹ca element
-
+    void remove(int key);
     //Funkcja szukajaca drogi do podaniego elementu
 
     //niewiem o co chodzi
