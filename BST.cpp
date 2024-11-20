@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "BST.h"
 #include "iostream"
+#include "vector"
 
 using namespace std;
 
@@ -105,6 +106,10 @@ void BST::postorder(Node* current)
         cout << current->key << " "; // Przetwórz bie¿¹cy wêze³
     }
 }
+//szukaj drogi
+
+
+
 
 
 
@@ -154,5 +159,4 @@ void BST::removeTree()
     removeTree(root);
     root = nullptr;
 }
-
 

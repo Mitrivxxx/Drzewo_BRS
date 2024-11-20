@@ -1,6 +1,8 @@
 ﻿#include "pch.h"
 #include "BST.h"
 #include "iostream"
+#include "vector"
+
 
 using namespace std;
 
@@ -29,6 +31,7 @@ int main() {
     cout << "\nUsun cale drzwo" << endl;
     tree.removeTree();
     tree.show_inorder();
+
 
     return 0;
 }
