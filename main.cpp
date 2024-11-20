@@ -6,7 +6,8 @@
 
 using namespace std;
 
-// ide na dev
+//to jest plik dev
+
 
 int main() {
     BST tree;
