@@ -7,6 +7,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 
 //to jest kod osoby 1
 //funkcja 1
@@ -19,6 +20,10 @@ using namespace std;
 //jakas zmiana
 
 //osoba 3 dodaje kod
+=======
+//dev
+//konflikt
+>>>>>>> dev
 
 int main() {
     BST tree;
