@@ -1,0 +1,430 @@
+\doxysection{BST Class Reference}
+\hypertarget{class_b_s_t}{}\label{class_b_s_t}\index{BST@{BST}}
+
+
+Klasa reprezentuj¹ca drzewo \doxylink{class_b_s_t}{BST} (Binary Search Tree).  
+
+
+
+
+{\ttfamily \#include $<$BST.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Struktura reprezentuj¹ca wêze³ drzewa \doxylink{class_b_s_t}{BST}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}{BST}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_b_s_t}{BST}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_aff9c7948fbba37844d2893b920ddc238}{\texorpdfstring{$\sim$}{\string~}\+BST}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_b_s_t}{BST}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_af076f14955a63d87711074f253705829}{insert}} (int key)
+\begin{DoxyCompactList}\small\item\em Funkcja dodaj¹ca nowy klucz do drzewa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_ab1290691ad8f1a016805cba883375188}{remove}} (int key)
+\begin{DoxyCompactList}\small\item\em Funkcja usuwaj¹ca wêze³ o danym kluczu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a09ffe1458048c86cd935cdea905af213}{remove\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja usuwaj¹ca ca³e drzewo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a4e1255d64482ff4420012791e65d90ee}{save\+To\+FileP}} (const std\+::string \&filename, int type)
+\begin{DoxyCompactList}\small\item\em Funkcja zapisuj¹ca drzewo do pliku w okreœlonym porz¹dku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_aa923c38e60bf0d91d717b2be476d34f0}{show\+\_\+inorder}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja wyœwietlaj¹ca drzewo w porz¹dku inorder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_ae3cf504b60262b1cbedbfe9b23f465cc}{show\+\_\+preorder}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja wyœwietlaj¹ca drzewo w porz¹dku preorder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a3b17b6cc08ce74c3370b5810be04b6e2}{show\+\_\+postorder}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja wyœwietlaj¹ca drzewo w porz¹dku postorder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_b_s_t_a19359021f5c608b519ecb97ae1c91902}{insert}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}current, int key)
+\begin{DoxyCompactList}\small\item\em Rekurencyjna funkcja dodaj¹ca nowy klucz do drzewa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_b_s_t_a9c6e3abfa397d1ec9d0d96fc7fdc5067}{remove}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}current, int key)
+\begin{DoxyCompactList}\small\item\em Rekurencyjna funkcja usuwaj¹ca wêze³ o danym kluczu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_b_s_t_a1fe103f057e96173338b30f8f77bf626}{find\+Min}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}current)
+\begin{DoxyCompactList}\small\item\em Funkcja znajduj¹ca najmniejszy wêze³ w drzewie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_aa18ce3dcdcf9712d18dcd597e79b03ac}{remove\+Tree}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}current)
+\begin{DoxyCompactList}\small\item\em Funkcja usuwaj¹ca ca³e drzewo \doxylink{class_b_s_t}{BST}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a65e063f5156a0268c8012d45ea1ff0d1}{save\+To\+File}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}node, std\+::ofstream \&file, int type)
+\begin{DoxyCompactList}\small\item\em Funkcja zapisuj¹ca drzewo do pliku w okreœlonym porz¹dku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_ae7962932e5e3cc0261247ef648d563b4}{inorder}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_b_s_t_a2fe6f9051e991d1b71ead4bd83477a71}{root}})
+\begin{DoxyCompactList}\small\item\em Funkcja przechodz¹ca drzewo w porz¹dku inorder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_ae1808a4110122d55040975578ee13143}{preorder}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}current)
+\begin{DoxyCompactList}\small\item\em Funkcja przechodz¹ca drzewo w porz¹dku preorder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a18991b37676dd5153ed406318c465e50}{postorder}} (\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}current)
+\begin{DoxyCompactList}\small\item\em Funkcja przechodz¹ca drzewo w porz¹dku postorder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_s_t_a2fe6f9051e991d1b71ead4bd83477a71}\label{class_b_s_t_a2fe6f9051e991d1b71ead4bd83477a71} 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries root}
+\begin{DoxyCompactList}\small\item\em Korzeñ drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentuj¹ca drzewo \doxylink{class_b_s_t}{BST} (Binary Search Tree). 
+
+Klasa implementuje drzewo binarne wyszukiwania, umo¿liwiaj¹c dodawanie, usuwanie, przeszukiwanie i zapisywanie drzewa do pliku. Operacje te s¹ wykonywane zgodnie z zasadami drzewa \doxylink{class_b_s_t}{BST}, gdzie ka¿dy wêze³ ma maksymalnie dwóch potomków\+: lewego i prawego. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}\index{BST@{BST}!BST@{BST}}
+\index{BST@{BST}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}}
+{\footnotesize\ttfamily \label{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178} 
+BST\+::\+BST (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_b_s_t}{BST}. 
+
+Konstruktor domyslny klasy \doxylink{class_b_s_t}{BST}.
+
+Inicjalizuje puste drzewo (korzeñ ustawiony na nullptr).
+
+Inicjalizuje korzen drzewa jako {\ttfamily nullptr}. \Hypertarget{class_b_s_t_aff9c7948fbba37844d2893b920ddc238}\index{BST@{BST}!````~BST@{\texorpdfstring{$\sim$}{\string~}BST}}
+\index{````~BST@{\texorpdfstring{$\sim$}{\string~}BST}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BST()}{\string~BST()}}
+{\footnotesize\ttfamily \label{class_b_s_t_aff9c7948fbba37844d2893b920ddc238} 
+BST\+::\texorpdfstring{$\sim$}{\string~}\+BST (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{class_b_s_t}{BST}. 
+
+Usuwa wszystkie wêz³y w drzewie, aby zwolniæ pamiêæ.
+
+Niszczy drzewo. Upewnia sie, ze wszystkie wezly zostaly poprawnie usuniete. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_s_t_a1fe103f057e96173338b30f8f77bf626}\index{BST@{BST}!findMin@{findMin}}
+\index{findMin@{findMin}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{findMin()}{findMin()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a1fe103f057e96173338b30f8f77bf626} 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{BST\+::\+Node}} \texorpdfstring{$\ast$}{*} BST\+::find\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{current}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja znajduj¹ca najmniejszy wêze³ w drzewie. 
+
+Funkcja przeszukuje lewe poddrzewo, a¿ znajdzie wêze³ o najmniejszym kluczu. 
+\begin{DoxyParams}{Parameters}
+{\em current} & WskaŸnik na bie¿¹cy wêze³. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+WskaŸnik na najmniejszy wêze³. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_ae7962932e5e3cc0261247ef648d563b4}\index{BST@{BST}!inorder@{inorder}}
+\index{inorder@{inorder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{inorder()}{inorder()}}
+{\footnotesize\ttfamily \label{class_b_s_t_ae7962932e5e3cc0261247ef648d563b4} 
+void BST\+::inorder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja przechodz¹ca drzewo w porz¹dku inorder. 
+
+Przechodzi drzewo \doxylink{class_b_s_t}{BST} w porzadku inorder (lewy, korzen, prawy).
+
+Funkcja rekurencyjnie przechodzi drzewo i wyœwietla klucze w porz¹dku inorder (lewy, korzeñ, prawy). 
+\begin{DoxyParams}{Parameters}
+{\em root} & WskaŸnik na korzeñ poddrzewa.\\
+\hline
+\end{DoxyParams}
+Funkcja rekurencyjnie przechodzi drzewo \doxylink{class_b_s_t}{BST} w porzadku inorder, czyli najpierw przeszukuje lewe poddrzewo, nastepnie wypisuje klucz wezla (korzen), a na koniec przeszukuje prawe poddrzewo. Porzadek ten jest wykorzystywany m.\+in. do uzyskania posortowanej listy kluczy w drzewie.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Wskaznik na aktualny wezel, od ktorego rozpoczyna sie przechodzenie drzewa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_af076f14955a63d87711074f253705829}\index{BST@{BST}!insert@{insert}}
+\index{insert@{insert}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_b_s_t_af076f14955a63d87711074f253705829} 
+void BST\+::insert (\begin{DoxyParamCaption}\item[{int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja dodaj¹ca nowy klucz do drzewa. 
+
+Funkcja wywo³uje rekurencyjn¹ wersjê {\ttfamily insert} w celu dodania nowego klucza. 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz, który ma zostaæ dodany do drzewa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a19359021f5c608b519ecb97ae1c91902}\index{BST@{BST}!insert@{insert}}
+\index{insert@{insert}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_b_s_t_a19359021f5c608b519ecb97ae1c91902} 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{BST\+::\+Node}} \texorpdfstring{$\ast$}{*} BST\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{current}{, }\item[{int}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rekurencyjna funkcja dodaj¹ca nowy klucz do drzewa. 
+
+Dodaje klucz do drzewa \doxylink{class_b_s_t}{BST}.
+
+Funkcja wstawia nowy klucz do drzewa \doxylink{class_b_s_t}{BST}, zachowuj¹c jego strukturaln¹ w³aœciwoœæ. 
+\begin{DoxyParams}{Parameters}
+{\em current} & WskaŸnik na bie¿¹cy wêze³. \\
+\hline
+{\em key} & Klucz, który ma zostaæ dodany. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+WskaŸnik na nowy korzeñ (lub pozosta³y korzeñ) poddrzewa.
+\end{DoxyReturn}
+Tworzy nowy wezel i wstawia go na odpowiednia pozycje w drzewie.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Wskaznik na aktualny wezel drzewa. \\
+\hline
+{\em key} & Wartosc klucza do dodania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wskaznik na aktualny wezel po dodaniu nowego elementu. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_a18991b37676dd5153ed406318c465e50}\index{BST@{BST}!postorder@{postorder}}
+\index{postorder@{postorder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{postorder()}{postorder()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a18991b37676dd5153ed406318c465e50} 
+void BST\+::postorder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{current}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja przechodz¹ca drzewo w porz¹dku postorder. 
+
+Przechodzi drzewo \doxylink{class_b_s_t}{BST} w porzadku postorder (lewy, prawy, korzen).
+
+Funkcja rekurencyjnie przechodzi drzewo i wyœwietla klucze w porz¹dku postorder (lewy, prawy, korzeñ). 
+\begin{DoxyParams}{Parameters}
+{\em current} & WskaŸnik na bie¿¹cy wêze³.\\
+\hline
+\end{DoxyParams}
+Funkcja rekurencyjnie przechodzi drzewo \doxylink{class_b_s_t}{BST} w porzadku postorder, czyli najpierw przeszukuje lewe poddrzewo, potem prawe poddrzewo, a na koniec wypisuje klucz wezla (korzen).
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Wskaznik na aktualny wezel, od ktorego rozpoczyna sie przechodzenie drzewa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_ae1808a4110122d55040975578ee13143}\index{BST@{BST}!preorder@{preorder}}
+\index{preorder@{preorder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{preorder()}{preorder()}}
+{\footnotesize\ttfamily \label{class_b_s_t_ae1808a4110122d55040975578ee13143} 
+void BST\+::preorder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{current}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja przechodz¹ca drzewo w porz¹dku preorder. 
+
+Przechodzi drzewo \doxylink{class_b_s_t}{BST} w porzadku preorder (korzen, lewy, prawy).
+
+Funkcja rekurencyjnie przechodzi drzewo i wyœwietla klucze w porz¹dku preorder (korzeñ, lewy, prawy). 
+\begin{DoxyParams}{Parameters}
+{\em current} & WskaŸnik na bie¿¹cy wêze³.\\
+\hline
+\end{DoxyParams}
+Funkcja rekurencyjnie przechodzi drzewo \doxylink{class_b_s_t}{BST} w porzadku preorder, czyli najpierw wypisuje klucz wezla (korzen), nastepnie przeszukuje lewe poddrzewo, a na koniec prawe poddrzewo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Wskaznik na aktualny wezel, od ktorego rozpoczyna sie przechodzenie drzewa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_ab1290691ad8f1a016805cba883375188}\index{BST@{BST}!remove@{remove}}
+\index{remove@{remove}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_b_s_t_ab1290691ad8f1a016805cba883375188} 
+void BST\+::remove (\begin{DoxyParamCaption}\item[{int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja usuwaj¹ca wêze³ o danym kluczu. 
+
+Usuwa wezel z drzewa \doxylink{class_b_s_t}{BST}.
+
+Funkcja wywo³uje rekurencyjn¹ wersjê {\ttfamily remove} w celu usuniêcia wêz³a. 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz wêz³a, który ma zostaæ usuniêty.\\
+\hline
+\end{DoxyParams}
+Funkcja usuwa wezel o zadanym kluczu z drzewa. W przypadku znalezienia wezla, zostaje on usuniety, a drzewo zostaje odpowiednio zaktualizowane.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz wezla, ktory ma zostac usuniety. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a9c6e3abfa397d1ec9d0d96fc7fdc5067}\index{BST@{BST}!remove@{remove}}
+\index{remove@{remove}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_b_s_t_a9c6e3abfa397d1ec9d0d96fc7fdc5067} 
+\mbox{\hyperlink{struct_b_s_t_1_1_node}{BST\+::\+Node}} \texorpdfstring{$\ast$}{*} BST\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{current}{, }\item[{int}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rekurencyjna funkcja usuwaj¹ca wêze³ o danym kluczu. 
+
+Usuwa wezel z drzewa \doxylink{class_b_s_t}{BST}.
+
+Funkcja usuwa wêze³ o zadanym kluczu z drzewa, zachowuj¹c strukturaln¹ w³aœciwoœæ drzewa \doxylink{class_b_s_t}{BST}. 
+\begin{DoxyParams}{Parameters}
+{\em current} & WskaŸnik na bie¿¹cy wêze³. \\
+\hline
+{\em key} & Klucz wêz³a, który ma zostaæ usuniêty. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+WskaŸnik na nowy korzeñ (lub pozosta³y korzeñ) poddrzewa.
+\end{DoxyReturn}
+Funkcja rekursywnie przeszukuje drzewo w celu znalezienia wezla o podanym kluczu i usuwa go. Usuwanie moze odbywac sie na trzy sposoby\+:
+\begin{DoxyItemize}
+\item Wezel nie ma dzieci (jest liœciem) -\/ usuwa wezel.
+\item Wezel ma jedno dziecko (lewe lub prawe) -\/ usuwa wezel i przypisuje odpowiednie dziecko.
+\item Wezel ma dwoje dzieci -\/ znajduje najmniejszy wezel w prawym poddrzewie, przepisuje jego klucz do usuwanego wezla i usuwa ten najmniejszy wezel.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Wskaznik na aktualny wezel drzewa, od ktorego rozpoczyna sie przeszukiwanie. \\
+\hline
+{\em key} & Klucz wezla, ktory ma zostac usuniety. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wskaznik na aktualny wezel po usunieciu. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_a09ffe1458048c86cd935cdea905af213}\index{BST@{BST}!removeTree@{removeTree}}
+\index{removeTree@{removeTree}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{removeTree()}{removeTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_b_s_t_a09ffe1458048c86cd935cdea905af213} 
+void BST\+::remove\+Tree (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja usuwaj¹ca ca³e drzewo. 
+
+Funkcja wywo³uje rekurencyjn¹ wersjê {\ttfamily remove\+Tree} w celu usuniêcia ca³ego drzewa. \Hypertarget{class_b_s_t_aa18ce3dcdcf9712d18dcd597e79b03ac}\index{BST@{BST}!removeTree@{removeTree}}
+\index{removeTree@{removeTree}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{removeTree()}{removeTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_b_s_t_aa18ce3dcdcf9712d18dcd597e79b03ac} 
+void BST\+::remove\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{current}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja usuwaj¹ca ca³e drzewo \doxylink{class_b_s_t}{BST}. 
+
+Usuwa cale drzewo \doxylink{class_b_s_t}{BST}.
+
+Funkcja rekurencyjnie usuwa wszystkie wêz³y w drzewie. 
+\begin{DoxyParams}{Parameters}
+{\em current} & WskaŸnik na bie¿¹cy wêze³.\\
+\hline
+\end{DoxyParams}
+Funkcja usuwa cale drzewo \doxylink{class_b_s_t}{BST}, usuwajac wszystkie wezly i resetujac korzen drzewa. \Hypertarget{class_b_s_t_a65e063f5156a0268c8012d45ea1ff0d1}\index{BST@{BST}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a65e063f5156a0268c8012d45ea1ff0d1} 
+void BST\+::save\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_s_t_1_1_node}{Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{std\+::ofstream \&}]{file}{, }\item[{int}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja zapisuj¹ca drzewo do pliku w okreœlonym porz¹dku. 
+
+Zapisuje drzewo do pliku w zadanej kolejnosci.
+
+Funkcja zapisuje klucze drzewa do pliku w porz¹dku zale¿nym od zadanego typu. 
+\begin{DoxyParams}{Parameters}
+{\em node} & WskaŸnik na wêze³, który ma zostaæ zapisany. \\
+\hline
+{\em file} & Referencja na obiekt pliku, do którego bêd¹ zapisywane dane. \\
+\hline
+{\em type} & Typ przejœcia drzewa (1 -\/ inorder, 2 -\/ preorder, 3 -\/ postorder).\\
+\hline
+\end{DoxyParams}
+Funkcja rekurencyjnie przeszukuje drzewo i zapisuje klucze wezlow do pliku w zaleznosci od typu przejscia drzewa\+:
+\begin{DoxyItemize}
+\item Inorder\+: left, root, right
+\item Preorder\+: root, left, right
+\item Postorder\+: left, right, root
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Wskaznik na obecny wezel. \\
+\hline
+{\em file} & Strumien pliku, do ktorego zapisywane sa klucze wezlow. \\
+\hline
+{\em type} & Typ przejscia drzewa\+: 1 -\/ inorder 2 -\/ preorder 3 -\/ postorder \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a4e1255d64482ff4420012791e65d90ee}\index{BST@{BST}!saveToFileP@{saveToFileP}}
+\index{saveToFileP@{saveToFileP}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{saveToFileP()}{saveToFileP()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a4e1255d64482ff4420012791e65d90ee} 
+void BST\+::save\+To\+FileP (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{int}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja zapisuj¹ca drzewo do pliku w okreœlonym porz¹dku. 
+
+Funkcja zapisuje drzewo do pliku w formacie tekstowym w zadanym porz¹dku. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nazwa pliku, do którego drzewo zostanie zapisane. \\
+\hline
+{\em type} & Typ przejœcia drzewa (1 -\/ inorder, 2 -\/ preorder, 3 -\/ postorder). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_aa923c38e60bf0d91d717b2be476d34f0}\index{BST@{BST}!show\_inorder@{show\_inorder}}
+\index{show\_inorder@{show\_inorder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{show\_inorder()}{show\_inorder()}}
+{\footnotesize\ttfamily \label{class_b_s_t_aa923c38e60bf0d91d717b2be476d34f0} 
+void BST\+::show\+\_\+inorder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja wyœwietlaj¹ca drzewo w porz¹dku inorder. 
+
+Wyswietla drzewo w porzadku inorder.
+
+Funkcja wywo³uje rekurencyjn¹ funkcjê {\ttfamily inorder} i wypisuje elementy drzewa w porz¹dku inorder.
+
+Funkcja wypisuje wszystkie klucze w drzewie w porzadku inorder (lewy, korzen, prawy). Jest to jeden ze sposobow przechodzenia drzewa, ktory daje posortowane elementy. \Hypertarget{class_b_s_t_a3b17b6cc08ce74c3370b5810be04b6e2}\index{BST@{BST}!show\_postorder@{show\_postorder}}
+\index{show\_postorder@{show\_postorder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{show\_postorder()}{show\_postorder()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a3b17b6cc08ce74c3370b5810be04b6e2} 
+void BST\+::show\+\_\+postorder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja wyœwietlaj¹ca drzewo w porz¹dku postorder. 
+
+Wyswietla drzewo w porzadku postorder.
+
+Funkcja wywo³uje rekurencyjn¹ funkcjê {\ttfamily postorder} i wypisuje elementy drzewa w porz¹dku postorder.
+
+Funkcja wypisuje wszystkie klucze w drzewie w porzadku postorder (lewy, prawy, korzen). Jest to sposób przechodzenia drzewa, w którym najpierw przetwarzamy dzieci przed rodzicem. \Hypertarget{class_b_s_t_ae3cf504b60262b1cbedbfe9b23f465cc}\index{BST@{BST}!show\_preorder@{show\_preorder}}
+\index{show\_preorder@{show\_preorder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{show\_preorder()}{show\_preorder()}}
+{\footnotesize\ttfamily \label{class_b_s_t_ae3cf504b60262b1cbedbfe9b23f465cc} 
+void BST\+::show\+\_\+preorder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja wyœwietlaj¹ca drzewo w porz¹dku preorder. 
+
+Wyswietla drzewo w porzadku preorder.
+
+Funkcja wywo³uje rekurencyjn¹ funkcjê {\ttfamily preorder} i wypisuje elementy drzewa w porz¹dku preorder.
+
+Funkcja wypisuje wszystkie klucze w drzewie w porzadku preorder (korzen, lewy, prawy). Jest to inny sposob przechodzenia drzewa, w ktorym najpierw przetwarzamy korzen. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matis/\+Desktop/dox/BST.\+h\item 
+C\+:/\+Users/matis/\+Desktop/dox/BST.\+cpp\end{DoxyCompactItemize}
