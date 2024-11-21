@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+//to jest kod osoby 1
 
 int main() {
     BST tree;
