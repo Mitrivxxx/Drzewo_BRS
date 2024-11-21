@@ -9,6 +9,9 @@ using namespace std;
 
 // to jest osoba 2
 
+//Funkcja 4
+//Funkcja 5
+
 int main() {
     BST tree;
     //dodaj elementy do drzewa
