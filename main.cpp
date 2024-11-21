@@ -18,6 +18,8 @@ using namespace std;
 //Funkcja 5
 //jakas zmiana
 
+//osoba 3 dodaje kod
+
 int main() {
     BST tree;
     //dodaj elementy do drzewa
