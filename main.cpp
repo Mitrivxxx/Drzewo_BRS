@@ -8,6 +8,7 @@
 using namespace std;
 
 //to jest kod osoby 1
+//funkcja 1
 
 int main() {
     BST tree;
