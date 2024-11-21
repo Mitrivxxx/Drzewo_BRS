@@ -1,8 +1,9 @@
 #include "pch.h"
 #include "BST.h"
 #include "iostream"
-#include "vector"
 
+#include <fstream> // Potrzebne do obs≥ugi plikÛw
+#include <string>
 using namespace std;
 
 
@@ -72,10 +73,44 @@ BST::Node* BST::remove(Node* current, int key) {
     }
     return current;
 }
-//usun cale drzewo
 
 
+void BST::saveToFile(Node* node, std::ofstream& file, int type) {
+    if (node == nullptr) {
+        return;
+    }
 
+    switch (type) {
+    case 1:
+        // Inorder: left, root, right
+        saveToFile(node->left, file, type);
+        file << node->key << " ";
+        saveToFile(node->right, file, type);
+        break;
+
+    case 2:
+        // Preorder: root, left, right
+        file << node->key << " ";
+        saveToFile(node->left, file, type);
+        saveToFile(node->right, file, type);
+        break;
+
+    case 3:
+        // Postorder: left, right, root
+        saveToFile(node->left, file, type);
+        saveToFile(node->right, file, type);
+        file << node->key << " ";
+        break;
+
+    default:
+        cout << "Nieobs≥ugiwany typ przeglπdania drzewa!" << endl;
+    }
+}
+void BST::saveToFileP(const std::string& filename, int type) {
+    std::ofstream file(filename);
+    saveToFile(root, file, type); // Wywo≥anie metody rekurencyjnej
+    file.close();
+}
 
 
 
@@ -89,24 +124,25 @@ void BST::inorder(Node* root)
         inorder(root->right);
     }
 }
+
 void BST::preorder(Node* current)
 {
     if (current != nullptr) {
-        cout << current->key << " "; // PrzetwÛrz bieøπcy wÍze≥
-        preorder(current->left);    // Przejdü do lewego poddrzewa
-        preorder(current->right);   // Przejdü do prawego poddrzewa
+        cout << current->key << " ";
+        preorder(current->left);
+        preorder(current->right);
     }
 }
 
 void BST::postorder(Node* current)
 {
     if (current != nullptr) {
-        postorder(current->left);   // Przejdü do lewego poddrzewa
-        postorder(current->right);  // Przejdü do prawego poddrzewa
-        cout << current->key << " "; // PrzetwÛrz bieøπcy wÍze≥
+        postorder(current->left);
+        postorder(current->right);
+        cout << current->key << " ";
     }
 }
-//szukaj drogi
+
 
 
 

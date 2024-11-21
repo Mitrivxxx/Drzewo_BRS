@@ -5,6 +5,7 @@
 *.props
 *.config
 *.txt
+!tree.txt
 
 pch.cpp
 pch.h

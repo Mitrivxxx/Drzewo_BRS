@@ -1,7 +1,8 @@
 #pragma once
 #ifndef BST_H
 #define BST_H
-#include "vector"
+#include <fstream>
+#include <string>
 class BST {
 private:
     struct Node {
@@ -19,6 +20,8 @@ private:
     Node* remove(Node* current, int key); // Rekurencyjna funkcja usuwania
     Node* findMin(Node* current);
     void removeTree(Node* current); // usun cale drzewo
+    void saveToFile(Node* node, std::ofstream& file, int type);
+
 
     
     //ukladanie drzewa
@@ -38,10 +41,9 @@ public:
     void removeTree();
     //Funkcja szukajaca drogi do podaniego elementu
 
-    //niewiem o co chodzi
 
     //Zapisz do pliku txt drzewo
-
+    void saveToFileP(const std::string& filename, int type);
 
 
     // Funkcja wyœwietlaj¹ca drzewo w porz¹dku inorder
