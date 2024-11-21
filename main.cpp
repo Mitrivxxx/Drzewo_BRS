@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+// to jest osoba 2
 
 int main() {
     BST tree;
