@@ -7,10 +7,17 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 //to jest kod osoby 1
 //funkcja 1
 //funkcja 2
 //funkcja 3
+=======
+// to jest osoba 2
+
+//Funkcja 4
+//Funkcja 5
+>>>>>>> osoba2
 
 int main() {
     BST tree;
