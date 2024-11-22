@@ -7,23 +7,7 @@
 
 using namespace std;
 
-<<<<<<< HEAD
 
-//to jest kod osoby 1
-//funkcja 1
-//funkcja 2
-//funkcja 3
-
-// to jest osoba 2
-//Funkcja 4
-//Funkcja 5
-//jakas zmiana
-
-//osoba 3 dodaje kod
-=======
-//dev
-//konflikt
->>>>>>> dev
 
 int main() {
     BST tree;
@@ -65,6 +49,10 @@ int main() {
     cout << "Wybrano: "; cin >> type;
 
     tree.saveToFileP("tree.txt", type);
+    
+    
+    
+    
     switch (type)
     {
     case 1:

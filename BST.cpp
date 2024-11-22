@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "BST.h"
-#include "iostream"
+#include <iostream>
 
-#include <fstream> // Potrzebne do obs³ugi plików
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -155,14 +155,35 @@ void BST::saveToFile(Node* node, std::ofstream& file, int type) {
     }
 }
 void BST::saveToFileP(const std::string& filename, int type) {
+    // Zapis do pliku tekstowego
     std::ofstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Nie mo¿na otworzyæ pliku tekstowego: " << filename << std::endl;
+        return;
+    }
     saveToFile(root, file, type); // Wywo³anie metody rekurencyjnej
     file.close();
-    std::ofstream fileBin("treeBin.bin", ios::binary);
-    saveToFile(root, file, type); // Wywo³anie metody rekurencyjnej
+
+    // Zapis do pliku binarnego
+    std::ofstream fileBin("treeBin.bin", std::ios::binary);
+    if (!fileBin.is_open()) {
+        std::cerr << "Nie mo¿na otworzyæ pliku binarnego: treeBin.bin" << std::endl;
+        return;
+    }
+    saveToBinary(root, fileBin); // Wywo³anie metody dla zapisu binarnego
     fileBin.close();
 }
 
+void BST::saveToBinary(Node* node, std::ofstream& fileBin) {
+    if (node == nullptr) {
+        return;
+    }
+
+    // Zapisujemy w kolejnoœci inorder (mo¿esz zmieniæ kolejnoœæ wed³ug potrzeb)
+    saveToBinary(node->left, fileBin);
+    fileBin.write(reinterpret_cast<const char*>(&node->key), sizeof(node->key));
+    saveToBinary(node->right, fileBin);
+}
 
 
 //Funkcje ukladajace drzewo

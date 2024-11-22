@@ -150,6 +150,8 @@ public:
      * @param type Typ przejœcia drzewa (1 - inorder, 2 - preorder, 3 - postorder).
      */
     void saveToFileP(const std::string& filename, int type);
+    void saveToBinary(Node* node, std::ofstream& fileBin);
+
 
     /**
      * @brief Funkcja wyœwietlaj¹ca drzewo w porz¹dku inorder.
